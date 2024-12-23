@@ -21,12 +21,15 @@
       <p class="h3">Insert a lot of numbers:</p>
       <label
         ><input
+          oninput="isValidData()"
           class="w-100 h3 rounded border-0 text-dark p-2"
           type="text"
+          name="inputBox"
           placeholder="2576431512..."
       /></label>
       <button
         type="button"
+        id="btnCheck"
         class="btn btn-primary btn-lg"
         style="--bs-btn-font-size: 1.75rem"
       >
