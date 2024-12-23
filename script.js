@@ -6,27 +6,29 @@ function isValidData() {
 
 // checking the repeating number:
 function checkRepeatingNumber() {
-  if (isEmptyData()) {
-    const inputBox = document.querySelector("input[name=inputBox]").value;
-    // convert to the list:
-    const listOfNumbers = inputBox.split("").map((item) => Number(item));
-    // The unique numbers:
-    const uniqueNumbers = new Set(listOfNumbers);
-    const targetObject = [];
-    uniqueNumbers.forEach((value) => {
-      targetObject.push({
-        number: value,
-        repeat: listOfNumbers.filter((item) => item === value).length,
-      });
+  if (!isEmptyData()) {
+    alertOfResult("", true, "Type a number, please!");
+    return;
+  }
+  const inputBox = document.querySelector("input[name=inputBox]").value;
+  // convert to the list:
+  const listOfNumbers = inputBox.split("").map((item) => Number(item));
+  // The unique numbers:
+  const uniqueNumbers = new Set(listOfNumbers);
+  const listObject = [];
+  uniqueNumbers.forEach((value) => {
+    listObject.push({
+      number: value,
+      repeat: listOfNumbers.filter((item) => item === value).length,
     });
-    const listForMax = targetObject
-      .map((obj) => Object.values(obj)[1])
-      .filter((f) => f !== 1);
-    const foundItem = targetObject.find(
-      (el) => Object.values(el)[1] === Math.max(...listForMax)
-    );
-    alertOfResult(foundItem ? foundItem["number"] : "nothing!");
-  } else alertOfResult("", true, "Type a number, please!");
+  });
+  const listCount = listObject
+    .map((obj) => Object.values(obj)[1])
+    .filter((f) => f !== 1);
+  const foundItem = listObject.find(
+    (el) => Object.values(el)[1] === Math.max(...listCount)
+  );
+  alertOfResult(foundItem ? foundItem["number"] : "nothing!");
 }
 
 // show or hide alert of result:
