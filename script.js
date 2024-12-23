@@ -67,6 +67,8 @@ function showDataInTable(objectsOfList) {
   const tableOfNumbers = document.getElementById("tableOfNumbers");
   tableOfNumbers.classList.remove("d-none");
   let counter = 1;
+  // sorting object of numbers:
+  objectsOfList.sort((a, b) => b["repeat"] - a["repeat"]);
   objectsOfList.map((item) => {
     const tr = document.createElement("tr"),
       th = document.createElement("th"),
