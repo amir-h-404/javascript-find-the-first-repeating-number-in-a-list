@@ -11,7 +11,7 @@
   </head>
 
   <body
-    class="d-flex justify-content-center align-items-center"
+    class="d-flex justify-content-center align-items-center flex-column gap-4"
     style="min-height: 100%"
   >
     <div
@@ -30,12 +30,15 @@
       <button
         onclick="checkRepeatingNumber()"
         type="button"
-        id="btnCheck"
         class="btn btn-primary btn-lg"
         style="--bs-btn-font-size: 1.75rem"
       >
         check
       </button>
+    </div>
+    <div id="alertOfResult" class="alert alert-success h3 d-none" role="alert">
+      <span>The repeating number: </span>
+      <strong></strong>
     </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
