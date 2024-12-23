@@ -14,8 +14,8 @@ function checkRepeatingNumber() {
   // convert to the list:
   const listOfNumbers = inputBox.split("").map((item) => Number(item));
   // The unique numbers:
-  const uniqueNumbers = new Set(listOfNumbers);
-  const listObject = [];
+  const uniqueNumbers = new Set(listOfNumbers),
+    listObject = [];
   uniqueNumbers.forEach((value) => {
     listObject.push({
       number: value,
@@ -23,11 +23,11 @@ function checkRepeatingNumber() {
     });
   });
   const listCount = listObject
-    .map((obj) => Object.values(obj)[1])
-    .filter((f) => f !== 1);
-  const foundItem = listObject.find(
-    (el) => Object.values(el)[1] === Math.max(...listCount)
-  );
+      .map((obj) => Object.values(obj)[1])
+      .filter((f) => f !== 1),
+    foundItem = listObject.find(
+      (el) => Object.values(el)[1] === Math.max(...listCount)
+    );
   alertOfResult(foundItem ? foundItem["number"] : "nothing!");
 }
 
@@ -47,3 +47,11 @@ function alertOfResult(
 function isEmptyData() {
   return document.querySelector("input[name=inputBox]").value.length !== 0;
 }
+
+/*
+<tr>
+            <th scope="row">1</th>
+            <td>8</td>
+            <td>3</td>
+          </tr>
+ */
