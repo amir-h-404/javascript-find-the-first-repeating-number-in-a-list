@@ -11,13 +11,14 @@ function checkRepeatingNumber() {
     alertOfResult("", true, "Type a number, please!");
     return;
   }
-  const inputBox = document.querySelector("input[name=inputBox]").value;
   // convert to the list:
-  const listOfNumbers = inputBox.split("").map((item) => Number(item));
+  const listOfNumbers = document
+    .querySelector("input[name=inputBox]")
+    .value.split("")
+    .map((item) => Number(item));
   // The unique numbers:
-  const uniqueNumbers = new Set(listOfNumbers),
-    listObject = [];
-  uniqueNumbers.forEach((value) => {
+  const listObject = [];
+  new Set(listOfNumbers).forEach((value) => {
     listObject.push({
       number: value,
       repeat: listOfNumbers.filter((item) => item === value).length,
