@@ -17,3 +17,8 @@ const numbers2 = [2, 1, 1, 2, 3, 5, 1, 2, 4, 1]; // output: 1
 
 const numbers3 = [2, 3, 4, 5]; // output: none
 ```
+
+## Features
+
+- Display numbers with their repetition count in a table.
+- Highlight the most repeated number.
