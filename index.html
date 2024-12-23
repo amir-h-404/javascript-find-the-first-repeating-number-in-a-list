@@ -17,11 +17,12 @@
     <div
       class="d-flex flex-column gap-2 justify-content-center align-items-stretch p-3 rounded-4 text-primary-emphasis bg-primary-subtle"
     >
-      <h1 class="text-center">Finding a repeating number</h1>
+      <h1 class="text-center">Finding a repeated number</h1>
       <p class="h3">Insert a lot of numbers:</p>
       <label
         ><input
           oninput="isValidData()"
+          autocomplete="off"
           class="w-100 h3 rounded border-0 text-dark p-2"
           type="text"
           name="inputBox"
@@ -37,7 +38,7 @@
       </button>
     </div>
     <div id="alertOfResult" class="alert alert-success h3 d-none" role="alert">
-      <span>The repeating number: </span>
+      <span>The most repeated number: </span>
       <strong></strong>
     </div>
     <script src="script.js"></script>
