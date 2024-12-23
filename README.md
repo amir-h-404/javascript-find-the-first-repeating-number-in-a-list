@@ -1,12 +1,12 @@
 ## Problem Statement
 
-Find the First Repeating Number in a List.
+Find the Most Repeating Number in a List.
 
 ## Solution
 
 - JavaScript project - **2**
 - Look at **this repository** to see the solution.
-- This project includes a JavaScript function that takes a list of numbers as input and finds the first number that repeats more than once.
+- This project includes a JavaScript function that takes a list of numbers as input and finds the most number that repeats more than once.
 
 ```javascript
 // example:
